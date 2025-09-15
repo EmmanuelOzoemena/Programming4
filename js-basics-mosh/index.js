@@ -41,3 +41,17 @@ selectedColors[2] = 1;
 console.log(selectedColors.length);
 
 // Functions
+
+// Performing a task
+function greet(name, lastName) {
+  console.log(`Hello ${name} ${lastName}`); // Template literal
+}
+
+greet("Ebuka", "Ozoemena");
+
+// Calculating a value
+function square(number) {
+  return number * number;
+}
+
+console.log(square(2));
