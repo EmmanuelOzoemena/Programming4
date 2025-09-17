@@ -106,4 +106,94 @@ let myList = [
   ["Eggs", 12],
 ];
 
-console.log(myList)
+console.log(myList);
+
+// Functions
+
+function ourReusableFunction() {
+  console.log("Heyya, World!");
+}
+
+ourReusableFunction();
+ourReusableFunction();
+ourReusableFunction();
+
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+
+ourFunctionWithArgs(10, 5);
+ourFunctionWithArgs(43, 99);
+
+// Scope
+let myGlobal = 10;
+
+function fun1() {
+  oopsGlobal = 5;
+}
+
+function fun2() {
+  let output = "";
+
+  if (typeof myGlobal != "undefined") {
+    output += `myGlobal: ${myGlobal}`;
+  }
+
+  if (typeof oopsGlobal != "undefined") {
+    output += `oopsGlobal: ${oopsGlobal}`;
+  }
+
+  console.log(output);
+}
+
+// fun1()
+fun2();
+
+// Local Scope
+
+function myLocalScope() {
+  let anExample = 5;
+  console.log(anExample);
+}
+
+myLocalScope();
+// console.log(anExample); // Throws an error
+
+// Local vs Global scope
+
+let outerWear = "T-Shirt";
+
+function myOutfit() {
+  let outerWear = "Sweater";
+
+  return outerWear;
+}
+
+console.log(myOutfit());
+console.log(outerWear);
+
+// Returing a value from a function with return
+
+function minusSeven(num) {
+  return num - 7;
+}
+
+console.log(minusSeven(10));
+console.log(minusSeven(34));
+
+let sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+
+console.log(addThree());
+
+let changed = 0;
+
+function change(num) {
+  return (num + 5) / 3;
+}
+
+changed = change(10);
+
+console.log(changed);
